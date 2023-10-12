@@ -5,3 +5,5 @@ ALPHA = 0.001      #Learning rate for the Q-Table
 EPSILON_DECAY = 0.99
 LR = 0.0005      #Learning Rate of the Neural Network
 BUFFER_SIZE = 100000
+
+DEVICE ="cuda" if torch.cuda.is_available() else "cpu"
