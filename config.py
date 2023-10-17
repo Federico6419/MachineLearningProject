@@ -8,6 +8,7 @@ EPSILON_DECAY = 0.99
 LR = 0.0005      #Learning Rate of the Neural Network
 BUFFER_SIZE = 100000
 BATCH_SIZE = 64
+TARGET_FREQ_UPDATE = 10
 
 USE_QTABLE = False
 
