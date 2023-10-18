@@ -12,7 +12,7 @@ class Model(nn.Module):
         self.dense1 = nn.Linear(432, 216)
         self.dense2 = nn.Linear(216, 12)
     
-        self.flatten = torch.flatten(start_dim=2)
+        #self.flatten = torch.flatten(start_dim=2)
          
         self.maxpool = nn.MaxPool2d((2, 2))
 
@@ -20,7 +20,7 @@ class Model(nn.Module):
     def forward(self, state):
         x0 = self.maxpool(F.relu(self.conv1(state)))
         x1 = self.maxpool(F.relu(self.conv2(state)))
-        x2 = flatten(x1)
+        x2 = torch.flatten(x1)
         x3 = F.relu(self.dense1(x2))
         x4 = self.dense2(x3)
         return x4 
