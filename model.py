@@ -19,7 +19,7 @@ class Model(nn.Module):
 
     def forward(self, state):
         x0 = self.maxpool(F.relu(self.conv1(state)))
-        x1 = self.maxpool(F.relu(self.conv2(state)))
+        x1 = self.maxpool(F.relu(self.conv2(x0)))
         x2 = torch.flatten(x1)
         x3 = F.relu(self.dense1(x2))
         x4 = self.dense2(x3)
