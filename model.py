@@ -3,17 +3,34 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class Model(nn.Module):
-    #define the structure of the neural network
     def __init__(self):
         super(Model, self).__init__()
-        self.fc1 = nn.Linear(8, 64)
-        self.fc2 = nn.Linear(64,64)
-        self.fc3 = nn.Linear(64,32)
-        self.out = nn.Linear(32, 4)
         
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=7, stride=3),
+        self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=4),
+    
+        self.dense1 = nn.Linear(432, 216)
+        self.dense2 = nn.Linear(216, 12)
+    
+        self.flatten = torch.flatten()
+         
+        self.maxpool = nn.MaxPool2d((2, 2))
+
+
     def forward(self, state):
-        x0 = F.relu(self.fc1(state))
-        x1 = F.relu(self.fc2(x0))
-        x2 = F.relu(self.fc3(x1))
-        x3 = self.out(x2)
-        return x3
+        x0 = self.maxpool(F.relu(self.conv1(state)))
+        x1 = self.maxpool(F.relu(self.conv2(state)))
+        x2 = flatten(x1)
+        x3 = F.relu(self.dense1(x2))
+        x4 = self.dense2(x3)
+        return x4 
+
+
+
+
+
+
+
+    
+
+    
