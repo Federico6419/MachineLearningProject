@@ -21,7 +21,7 @@ def save_model(model, optimizer, episode):
     torch.save({
         "state_dict": model.state_dict(),
         "optimizer": optimizer.state_dict(),
-    }, CHECKPOINT)
+    }, CHECKPOINT_FOLDER)
 
 def load_model(file, model, optimizer):
     model_check = torch.load(file, map_location=DEVICE)
