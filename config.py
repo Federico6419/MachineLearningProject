@@ -15,6 +15,8 @@ USE_QTABLE = False
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 #Manage Checkpoints
+CHECKPOINT_FOLDER = "Checkpoints/checkpoint.pth.tar"
+
 def save_model(model, optimizer, episode):  
     torch.save({
         "state_dict": model.state_dict(),
