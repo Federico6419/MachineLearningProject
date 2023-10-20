@@ -6,8 +6,8 @@ class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
         
-        self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=7, stride=3),
-        self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=4),
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=7, stride=3)
+        self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=4)
     
         self.dense1 = nn.Linear(432, 216)
         self.dense2 = nn.Linear(216, 12)
