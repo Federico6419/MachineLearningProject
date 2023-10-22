@@ -5,6 +5,7 @@ MAX_EPSILON = 1      #Initial exploration probability
 MIN_EPSILON = 0.01      #Final exploration probability
 ALPHA = 0.001      #Learning rate for the Q-Table
 EPSILON_DECAY = 0.99
+GAMMA = 0.99     #Discount factor
 LR = 0.0005      #Learning Rate of the Neural Network
 BUFFER_SIZE = 5000 #100000
 BATCH_SIZE = 64
