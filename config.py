@@ -17,7 +17,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 #Manage Checkpoints
 LOAD_CHECKPOINT = True
-LOAD_CHECKPOINT_FOLDER = "Checkpoints/Checkpoint250.pth.tar"
+LOAD_CHECKPOINT_FOLDER = "Checkpoints/Checkpoint250"
 CHECKPOINT_FOLDER = "Checkpoints/checkpoint.pth.tar"
 
 def save_model(model, optimizer, episode):  
