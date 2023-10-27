@@ -16,8 +16,12 @@ USE_QTABLE = False
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 #Manage Checkpoints
+#Load
 LOAD_CHECKPOINT = True
 LOAD_CHECKPOINT_FOLDER = "Checkpoints/Checkpoint250"
+LOADED_EPSILON = 0.08105851616218133
+
+#Save Checkpoints
 CHECKPOINT_FOLDER = "Checkpoints/checkpoint.pth.tar"
 
 def save_model(model, optimizer, episode):  
