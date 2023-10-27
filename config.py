@@ -17,7 +17,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 #Manage Checkpoints
 #Load
-LOAD_CHECKPOINT = True
+LOAD_CHECKPOINT = False
 LOAD_CHECKPOINT_FOLDER = "Checkpoints/Checkpoint250"
 LOADED_EPSILON = 0.08105851616218133
 
