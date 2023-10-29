@@ -18,8 +18,8 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 #Manage Checkpoints
 #Load
 LOAD_CHECKPOINT = False
-LOAD_CHECKPOINT_FOLDER = "Checkpoints/CheckpointFinal100"
-LOADED_EPSILON = 0.36603234127322926
+LOAD_CHECKPOINT_FOLDER = "Checkpoints/CheckpointOpt200"
+LOADED_EPSILON = 0.13263987810938213
 
 #Save Checkpoints
 CHECKPOINT_FOLDER = "Checkpoints/checkpoint.pth.tar"
