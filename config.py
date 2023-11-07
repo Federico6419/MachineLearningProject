@@ -11,7 +11,7 @@ BUFFER_SIZE = 5000 #100000
 BATCH_SIZE = 64
 TARGET_FREQ_UPDATE = 5
 
-USE_QTABLE = False
+USE_QTABLE = True
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
