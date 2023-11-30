@@ -11,8 +11,6 @@ class Model(nn.Module):
     
         self.dense1 = nn.Linear(432, 216)
         self.dense2 = nn.Linear(216, 12)
-    
-        #self.flatten = torch.flatten(start_dim=2)
          
         self.maxpool = nn.MaxPool2d((2, 2))
 
