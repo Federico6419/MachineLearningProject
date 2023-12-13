@@ -11,7 +11,7 @@ BUFFER_SIZE = 5000
 BATCH_SIZE = 64         #Batch Size
 TARGET_FREQ_UPDATE = 5
 
-USE_QTABLE = True       #Decide if using Q-Table or Neural Network for training
+USE_QTABLE = False       #Decide if using Q-Table or Neural Network for training
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"    #Choose the Device
 
