@@ -1,6 +1,6 @@
 import torch
 
-NUM_EPISODES = 500      #Number of episodes
+NUM_EPISODES = 10      #Number of episodes
 MAX_EPSILON = 1         #Initial exploration probability
 MIN_EPSILON = 0.1       #Final exploration probability    
 ALPHA = 0.001           #Learning rate for the Q-Table
