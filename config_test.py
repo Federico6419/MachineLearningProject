@@ -1,6 +1,6 @@
 import torch
 
-NUM_EPISODES = 10      #Number of episodes
+NUM_EPISODES = 50      #Number of episodes
 LR = 0.0005             #Learning Rate of the Neural Network
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"        #Choose the Device
